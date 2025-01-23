@@ -27,3 +27,6 @@ To build the VTK package, run this command:
 ```bash
 conan create . --build=missing -s build_type=Release
 
+## Note: Automatic Test Execution with `test_package`
+
+During the `conan create` command, Conan automatically detects and executes the test located in the `test_package` directory after building the package. This mechanism ensures that the package is working as expected.
