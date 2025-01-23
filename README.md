@@ -13,6 +13,7 @@ This repository contains a Conan recipe for building and packaging the Visualiza
 - [CMake](https://cmake.org/) (version 3.15 or higher)
 - A compatible C++ compiler (e.g., MSVC for Windows)
 ## My default conan profile:
+```plaintext
 [settings]
 arch=x86_64
 build_type=Release
@@ -21,7 +22,7 @@ compiler.cppstd=17
 compiler.runtime=dynamic
 compiler.version=194
 os=Windows
-
+```
 ## Building the Package
 To build the VTK package, run this command:
 ```bash
@@ -30,3 +31,5 @@ conan create . --build=missing -s build_type=Release
 ## Note: Automatic Test Execution with `test_package`
 
 During the `conan create` command, Conan automatically detects and executes the test located in the `test_package` directory after building the package. This mechanism ensures that the package is working as expected.
+
+-> test_package\build\Release\example.exe
